@@ -1,3 +1,7 @@
+# !!! WARNING !!!
+# This code will result in rapid flashing of the light.
+# Do not use if you are prone to seizures.
+# !!! WARNING !!!
 import asyncio
 import time
 
@@ -36,10 +40,6 @@ async def main():
         counter += 1
         print(counter)
         await asyncio.sleep(0.1)
-        await bulb.async_set_rgb(255, 0, 0)
-        counter += 1
-        print(counter)
-        await asyncio.sleep(0.1)
     await bulb.async_stop_music()
     await bulb.async_set_rgb(255, 0, 0)
     await bulb.async_stop_listening()
@@ -64,21 +64,8 @@ def main_sync():
         counter += 1
         print(counter)
         time.sleep(0.1)
-        bulb.set_rgb(255,105,180)
-        counter += 1
-        print(counter)
-        time.sleep(0.1)
-        bulb.set_rgb(255,255,0)
-        counter += 1
-        print(counter)
-        time.sleep(0.1)
-        bulb.set_rgb(30,144,255)
-        counter += 1
-        print(counter)
-        time.sleep(0.1)
 
 
 if __name__ == "__main__":
     asyncio.run(main())
     main_sync()
-

@@ -7,7 +7,7 @@ async def do_nothing(param):
     pass
 
 async def main():
-    bulb = AsyncBulb("192.168.0.139")
+    bulb = AsyncBulb("IP HERE")
     await bulb.async_listen(do_nothing)
     bulb.turn_on()
     bulb.start_music()
@@ -31,7 +31,7 @@ async def main():
 # asyncio.run(main())
 
 def main_sync():
-    bulb = Bulb("192.168.0.139")
+    bulb = Bulb("IP HERE")
     bulb.turn_on()
     bulb.start_music()
 

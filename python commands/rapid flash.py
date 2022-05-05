@@ -4,7 +4,7 @@ import time
 from yeelight import Bulb
 from yeelight.aio import AsyncBulb
 
-BULBIP = "192.168.0.139"
+BULBIP = "IP HERE"
 
 
 def do_nothing(param):
